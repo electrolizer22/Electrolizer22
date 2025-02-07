@@ -56,11 +56,12 @@
       <div id="terminal" class="term">
           
         <pre id="output"></pre>
-        <div id="input-container">
+        <div style="width: 100%;" id="input-container">
           <label for="user-input">▶ </label>
           <input  type="text" id="group-name-input" autocomplete="off" autofocus /> 
           
-          
+          <button onclick="checkGroupName()" style="margin-left: 10px; background-color: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Enter</button>
+
         </div><br>
         <div id="group-name-check"></div>
         <div id="qr-container"></div>
