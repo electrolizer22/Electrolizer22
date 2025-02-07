@@ -30,11 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // The new introduction for the game (language translation theme)
   function askForPhrase() {
     const text =
-      "Welcome to the Transformer Game.\n" +
-      "In this game, you will be provided a phrase in transformer language, and your task is to translate it into English." +
-      "Let's begin the translation challenge. Are you ready?\n\n"+
-      "Enter your Registration Number:\n"+
-      "(only last 3 digits)";
+      "In a quiet corner of the universe, the Decepticons launched a covert operation, encrypting the name of your group's protector. To uncover the identity of your guardian robot, you must decrypt the hidden message—only then will you discover the group’s true name. The mission is in your hands, but only through the code will the secret be revealed.Here's a riddle based on the Transformers movie:"
+      +"In a world where Autobots fight Decepticons,"
+      +"I stand as a trilogy with battles and bonds.\n"
+      +"The first is 'Revenge,'\n the second 'Dark,'\n"
+      +"The third is where the final fight sparks.\n"
+      +" What number am I, when all three are seen?\n"
+      +"Enter your Registration Number:"
+      +"(only last 3 digits)";
+
 
     printToTerminal(text);
   }
