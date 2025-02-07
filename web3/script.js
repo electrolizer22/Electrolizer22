@@ -185,7 +185,7 @@ function checkGroupName() {
         let qrPath = `/img/QR_codes/${regNum}.png`;
         qrContainer.innerHTML = `
             
-            <a href="${qrPath}" download="${regNum}.png">
+            <a href="${qrPath}" download>
                 <button style="margin-top: 10px; background-color: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Download QR Code</button>
             </a>
         `;
