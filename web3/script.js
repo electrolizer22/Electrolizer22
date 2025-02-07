@@ -182,7 +182,7 @@ function checkGroupName() {
         outputElement.style.color = "green";
         
         // Display the QR code
-        let qrPath = `/img/QR_codes/${regNum}.png`;
+        let qrPath = `../img/QR_codes/${regNum}.png`;
         qrContainer.innerHTML = `
             
             <a href="${qrPath}" >
