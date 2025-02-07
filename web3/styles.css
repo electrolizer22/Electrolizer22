@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
 
+@font-face {
+  font-family: 'Transformer';
+  src: url('/Fonts/Transformer.ttf') format('truetype');
+}
 
 body {
   
-    font-family: 'MyCustomFont', "Courier New", monospace;
-    font-family: "Courier New", monospace;
+    font-family: 'Transformer', "Courier New", monospace;
+    /* font-family: "Courier New", monospace; */
     background-color: black;
     color: #ff00c8; /* Squid Game Red */
     margin: 0;

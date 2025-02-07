@@ -187,7 +187,7 @@ function checkGroupName() {
             <img src="${qrPath}" alt="QR Code" style="width: 200px; height: 200px; margin-top: 10px;">
             <br>
             <a href="${qrPath}" download="${regNum}.png">
-                <button style="margin-top: 10px;">Download QR Code</button>
+                <button style="margin-top: 10px; background-color: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Download QR Code</button>
             </a>
         `;
     } else {
