@@ -167,21 +167,36 @@ function checkGroupName() {
     const regNum = document.getElementById('user-input').value;
     const groupNameInput = document.getElementById('group-name-input').value;
     const outputElement = document.getElementById('group-name-check');
+    const qrContainer = document.getElementById('qr-container');
 
     let player = playerInfo.find(player => player.regNum === regNum);
     if (!player) {
         outputElement.innerHTML = "Registration number not found.";
+        outputElement.style.color = "red";
+        qrContainer.innerHTML = ""; // Clear previous QR if any
         return;
     }
 
     if (player.groupName.toLowerCase() === groupNameInput.toLowerCase()) {
-        outputElement.innerHTML = "This is your group name.We will send you the QR via mail.";
+        outputElement.innerHTML = "This is your group name. Save this QR code.";
         outputElement.style.color = "green";
+        
+        // Display the QR code
+        let qrPath = `/img/QR_codes/${regNum}.png`;
+        qrContainer.innerHTML = `
+            <img src="${qrPath}" alt="QR Code" style="width: 200px; height: 200px; margin-top: 10px;">
+            <br>
+            <a href="${qrPath}" download="${regNum}.png">
+                <button style="margin-top: 10px;">Download QR Code</button>
+            </a>
+        `;
     } else {
         outputElement.innerHTML = "Incorrect.";
         outputElement.style.color = "red";
+        qrContainer.innerHTML = ""; // Clear QR display if incorrect
     }
 }
+
 
 document.getElementById('group-name-input').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
