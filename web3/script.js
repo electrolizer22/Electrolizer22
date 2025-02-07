@@ -181,36 +181,20 @@ function checkGroupName() {
         outputElement.innerHTML = "This is your group name. Save this QR code.";
         outputElement.style.color = "green";
         
+        // Display the QR code
         let qrPath = `/img/QR_codes/${regNum}.png`;
-        
-        // Create a new image element
-        let img = new Image();
-        img.src = qrPath;
-        img.style.width = "200px";
-        img.style.height = "200px";
-        img.style.marginTop = "10px";
-
-        // Wait for the image to load
-        img.onload = function() {
-            qrContainer.innerHTML = ""; // Clear previous content
-            qrContainer.appendChild(img);
-
-            // Create and append the download button
-            let downloadBtn = document.createElement("a");
-            downloadBtn.href = qrPath;
-            downloadBtn.download = `${regNum}.png`;
-            downloadBtn.innerHTML = `
-                <br><button style="margin-top: 10px; background-color: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Download QR Code</button>
-            `;
-            qrContainer.appendChild(downloadBtn);
-        };
+        qrContainer.innerHTML = `
+            
+            <a href="${qrPath}" download="${regNum}.png">
+                <button style="margin-top: 10px; background-color: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Download QR Code</button>
+            </a>
+        `;
     } else {
         outputElement.innerHTML = "Incorrect.";
         outputElement.style.color = "red";
         qrContainer.innerHTML = ""; // Clear QR display if incorrect
     }
 }
-
 
 
 document.getElementById('group-name-input').addEventListener('keypress', function(event) {
